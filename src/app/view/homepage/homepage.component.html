@@ -1,0 +1,46 @@
+<div class="home">
+  <div class="home-row2">
+    <h1 class="Hi">
+      Hi, <span class="Hii">I'm</span><br />
+      Deepak,
+    </h1>
+  </div>
+  <div class="home-row2">
+    <div class="photo1">
+      <div class="photo12">
+        <img class="image1" src="../../../assets/mephoto2.jpeg" alt="" />
+        
+      </div>
+    </div>
+    <div class="content">
+      <app-about id="abt"></app-about>
+    </div>
+  </div>
+  <div *ngIf="!clickedDiv"  class="home-row2" [@inOutAnimation]  >
+    <div class="card" (click)="meClicked()">
+      <p>About <br />Me</p>
+    </div>
+    <div class="card" (click)="projectClicked()"><p>Projects</p></div>
+  </div>
+  <div *ngIf="clickedDiv && !projClicked" [@inOutAnimation] class="card1">
+    <button class="btn" (click)="unClicked()">X</button>
+    <app-me></app-me>
+  </div>
+
+  <div *ngIf="clickedDiv && projClicked" class="card1"  [@inOutAnimation]>
+    <button class="btn" (click)="unClicked()">X</button>
+    <app-projects
+      *ngFor="let project of Stock[0].projects"
+      [title]="project.title"
+      [description]="project.description"
+      [tools]="project.tools"
+      [imageUrl]="project.imageUrl"
+      [gitRepo]="project.gitRepo"
+      [url]="project.url"
+      [demo]="project.demo"
+    ></app-projects>
+  </div>
+  <div class="home-row2">
+    <app-form id="con"></app-form>
+  </div>
+</div>

@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100&display=swap')
+@function randomNum($min, $max)
+    $rand: random()
+    $randomNum: $min + floor($rand * (($max - $min) + 1))
+
+    @return $randomNum
+
+.home
+    display: flex
+    flex-direction: column
+    margin-top: 100px
+
+.home-row1
+    display: flex
+    justify-content: center
+    flex-direction: row
+    margin-top: 50px
+    flex-grow: 4
+    height: 200px
+
+.Hi
+    font-size: 100px
+    color: var(--primary-color)
+    align-items: flex-start
+    margin-top: 50px
+
+.home-row2
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: row
+    margin-bottom: 40px
+    border-radius: 6px
+
+#con
+    background-color: var(--primary-color)
+    min-width: 90%
+    border: 2px solid var(--primary-color)
+    border-radius: 6px
+   
+
+.prows1
+    flex: 2
+
+.prows2
+    flex: 2
+
+.svg1
+    height: 200px
+    margin-top: 50px
+
+.content
+
+    flex: 2
+
+.photo1
+    display: flex
+    justify-content: center
+    align-items: center
+    flex: 2
+
+.photo12
+    //border: 5px dotted var(--primary-color-dark);
+    padding: 20px
+    flex-wrap: wrap
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: 1.5s
+    transform: rotate(0deg)
+    border-radius: 6px
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25), 0px 1px 0px #000 inset
+
+.photo12:hover, .photo12:focus
+    //$randomnum : #{randomNum(-180, -360)};
+    transform: rotate(-360deg)
+
+.image1
+    height: 250px
+    width: 250px
+    border-radius: 6px
+    transition: 2s
+    transform: scale(1)
+    filter: saturate(30%)
+
+.image1:hover, .image1:focus
+    transform: scale(1.3) rotate(720deg)
+    filter: saturate(100%)
+    overflow: visible
+    z-index: 100
+
+.Hii
+    color: orange
+
+.card
+    height: 400px
+    width: 400px
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25), 0px 1px 0px #000 inset
+    padding: auto
+    margin: auto
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: var(--overlay-color)
+    border-radius: 6px
+    display: flex
+    flex-direction: column
+    position: relative
+    color: orange
+    font-weight: 900
+    margin-bottom: 20px
+
+.card p
+    font-size: 80px
+
+.card1
+    min-height: 400px
+    width: 90%
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25), 0px 1px 0px #000 inset
+    padding: auto
+    margin: auto
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    align-items: center
+    background-color: var(--primary-color)
+    border-radius: 6px
+    display: flex
+    position: relative
+    color: orange
+    font-weight: 900
+    margin-bottom: 100px
+
+.card:hover
+    background-color: var(--primary-color)
+.eff
+    position: absolute
+    bottom: 0
+    left: 0
+    border-top: 2px solid black
+    border-right: 2px solid black
+    height: 40px
+    width: 40px
+    background-color: var(--overlay-color)
+    border-radius: 0 0 0 100px
+    box-shadow: 10px 0px 5px rgba(0, 0, 0, 0.25), 0px 1px 0px #000 inset
+
+.btn
+    height: 20px
+    width: 23px
+    background-color: orange
+    position: absolute
+    right: 2px
+    top: 2px
+
+.faIcon
+    height: 30px
+    width: 30px
+
+@media screen and (max-width: 870px)
+    .home-row2
+        flex-direction: column
+        margin-bottom: 20px
+        width: 96%
+
+    .Hi
+        font-size: 60px
+        margin-top: 0px
+
+    .image1
+        height: 200px
+        width: 200px
+
+    .card
+        
+        height: 400px
+        font-size: 14px
+        
+        margin-top: 10px
+
+    .card1
+        width: 96%
+
+    #con
+        width: 98%
+
+
+@media screen and (max-width: 400px)
+    .card
+        width: 90%

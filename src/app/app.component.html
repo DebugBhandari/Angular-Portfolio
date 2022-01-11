@@ -1,0 +1,10 @@
+
+<div class="float">
+  <a href="https://www.linkedin.com/in/deepak-bhandari-1b7b96aa/"><fa-icon [icon]="faLinkedin"></fa-icon></a>
+  <a href="https://www.facebook.com/Deepbh/"><fa-icon [icon]="faFacebook"></fa-icon></a>
+  <a href="https://www.instagram.com/deepbh1/"><fa-icon [icon]="faInstagram"></fa-icon></a>
+  <a href="https://blog.debugbhandari.link/"><fa-icon [icon]="faBlogger"></fa-icon></a>
+</div>
+<app-header (proev)="message=$event" (proev2)="message2=$event"></app-header>
+<app-homepage [passev]="message" [passev2]="message2" ></app-homepage>
+<app-footer></app-footer>

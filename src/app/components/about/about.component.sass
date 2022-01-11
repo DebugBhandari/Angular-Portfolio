@@ -1,0 +1,202 @@
+
+    
+
+    .about
+        
+        width: 450px
+        min-height: 70px
+        display: flex
+        flex-direction: column
+         
+        justify-content: center
+        align-items: center
+        margin-left: 10%
+
+    .sp1
+        animation: anim 4s infinite linear
+        font-size: 44px
+
+    .sp2
+        animation: anim2 4s infinite linear
+        font-size: 44px
+
+    .sp1:hover, .sp1:focus, .sp2:hover, .sp2:focus 
+        color: var(--primary-color-dark)
+
+    .cont
+        size: 15em
+        color: var(--primary-color-dark)
+
+
+   
+
+
+
+    ////////////typewriter css
+
+    .typewriter
+       
+
+    .typewriter p 
+        border-right: .15em solid var(--primary-color-dark)
+        
+        font-size: 20px
+        white-space: nowrap
+        overflow: hidden
+      
+    .typewriter p:nth-child(1) 
+        width: 15em
+        -webkit-animation: type 2s steps(40, end)
+        animation: type 2s steps(40, end)
+        -webkit-animation-fill-mode: forwards
+        animation-fill-mode: forwards
+      
+      
+    .typewriter p:nth-child(2) 
+        width: 15em
+        opacity: 0
+        -webkit-animation: type2 2s steps(40, end)
+        animation: type2 2s steps(40, end) 
+        -webkit-animation-delay: 2s
+        animation-delay: 2s
+        -webkit-animation-fill-mode: forwards
+        animation-fill-mode: forwards
+      
+      
+    .typewriter p:nth-child(3) 
+        width: 15em
+        opacity: 0
+        -webkit-animation: type3 5s steps(20, end), blink .5s step-end infinite alternate
+        animation: type3 5s steps(20, end), blink .5s step-end infinite alternate
+        -webkit-animation-delay: 2s
+        animation-delay: 4s
+        -webkit-animation-fill-mode: forwards
+        animation-fill-mode: forwards
+      
+      
+    @keyframes type 
+        0% 
+          width: 0
+        
+        99.9% 
+          border-right: .15em solid orange
+        
+        100% 
+          border: none
+        
+      
+      
+    @-webkit-keyframes type 
+        0% 
+          width: 0
+        
+        99.9% 
+          border-right: .15em solid orange
+        
+        100% 
+          border: none
+        
+      
+      
+    @keyframes type2 
+        0% 
+          width: 0
+        
+        1% 
+          opacity: 1
+        
+        99.9% 
+          border-right: .15em solid orange
+        
+        100% 
+          opacity: 1
+          border: none
+        
+      
+      
+    @-webkit-keyframes type2 
+        0% 
+          width: 0
+        
+        1% 
+          opacity: 1
+        
+        99.9% 
+          border-right: .15em solid orange
+        
+        100% 
+          opacity: 1
+          border: none
+        
+      
+      
+    @keyframes type3 
+        0% 
+          width: 0
+        
+        1% 
+          opacity: 1
+        
+        100% 
+          opacity: 1
+        
+      
+      
+    @-webkit-keyframes type3 
+        0% 
+          width: 0
+        
+        1% 
+          opacity: 1
+        
+        100% 
+          opacity: 1
+        
+      
+      
+    @keyframes blink 
+        50% 
+          border-color: transparent
+        
+      
+    @-webkit-keyframes blink 
+        50% 
+          border-color: tranparent
+        
+      
+
+
+.butn
+    margin-top: 20px
+    width: 280px
+    height: 50px
+    background-color: var(--overlay-color)
+    color: black
+    border-radius: 6px
+    display: flex
+    justify-content: center
+    align-items: center
+    font-weight: 600
+    font-size: 20px
+    text-decoration: none
+    
+
+
+.about a
+    text-decoration: none 
+
+
+       
+
+@media screen and (max-width: 800px) 
+    .about
+       
+       margin-top: 50px
+       width: 360px
+       margin-left: 0px
+    
+    .typewriter p
+        font-size: 14px
+        margin-left: 30px
+    
+    

@@ -1,0 +1,51 @@
+<div class="formz">
+  <form
+    class="contact"
+    [formGroup]="form"
+    method="post"
+    id="my-form"
+    (ngSubmit)="onSubmit()"
+  >
+    <div class="form-group">
+      <label for="fullName"> Full Name</label>
+      <input
+        [formControl]="name"
+        type="text"
+        id="fullName"
+        required
+        placeholder="Deepak"
+      />
+    </div>
+    <div *ngIf="name.invalid" class="errordiv">Please enter your name</div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        [formControl]="email"
+        placeholder="email@example.com"
+        required
+        id="email"
+      />
+    </div>
+    <div class="errordiv" *ngIf="email.invalid"></div>
+
+    <div class="form-group">
+      <label for="massage">Massage</label>
+      <textarea
+        id="massage"
+        cols="30"
+        rows="10"
+        class="form-control"
+        [formControl]="message"
+        maxlength="256" placeholder="I'm interested in..." required
+      ></textarea>
+    </div>
+    <div class="hintdiv">{{message.value?.length || 0}}/256</div>
+    <div *ngIf="message.invalid" class="errordiv">Please enter a message.</div>
+    <button [disabled]="isLoading" class="submit" type="submit">Submit</button>
+    <input [formControl]="honeypot" class="hidden" type="text" />
+    <div [ngClass]="!submitted ? 'hidden' : 'visible'" class="center-text">
+      <span>{{ responseMessage }}</span>
+    </div>
+  </form>
+</div>

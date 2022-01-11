@@ -1,0 +1,56 @@
+<!--iframe src="../../../assets/DeepakBhandariCV (1).pdf" type="application/pdf" width="850px" height="1150px" class="pdf"></iframe-->
+
+<div class="me">
+  Hi there,<br /><br />
+  I'm
+  <h3 class="orng">Deepak Bhandari.</h3>
+  <p>
+    A Helsinki based, Nepalese, Full Stack Web Developer and AWS certified cloud
+    practitioner. I'm a critical thinker and a team player with years of
+    hands-on experience in various web frameworks and stacks. Highly motivated
+    and focused on understanding client requirements as well as delivering
+    beautiful and efficient end products.
+  </p>
+  <h3 class="orng">Skills:</h3>
+  <span class="orng">FrontEnd:</span>
+  {{ Stock[0].skills[0].join(", ") }}
+  <span class="orng">BackEnd:</span>
+  {{ Stock[0].skills[1].join(", ") }}
+  <span class="orng">Databases:</span>
+  {{ Stock[0].skills[2].join(", ") }}
+  <span class="orng">Mobile:</span>
+  {{ Stock[0].skills[3].join(", ") }}
+  <span class="orng">Testing:</span>
+  {{ Stock[0].skills[4].join(", ") }}
+  <span class="orng">DevOps:</span>
+  {{ Stock[0].skills[5].join(", ") }}
+
+  <br />
+  <br />
+  <h3 class="orng">Languages:</h3>
+  <table>
+    <tr>
+      <th class="orng">Language</th>
+      <th class="orng">Proficiency</th>
+    </tr>
+    <tr>
+      <td>Nepali</td>
+      <td>Mother-tongue</td>
+    </tr>
+    <tr>
+      <td>English</td>
+      <td>Fluent</td>
+    </tr>
+    <tr>
+      <td>Finnish</td>
+      <td>Intermediate</td>
+    </tr>
+    <tr>
+      <td>Hindi</td>
+      <td>Excellent</td>
+    </tr>
+  </table>
+
+  <h3 class="orng">Education:</h3>
+  <div *ngFor="let education of Stock[0].education">{{education.organization +" "+ education.graduation + " "+education.title + " " +education.address}}</div>
+</div>
